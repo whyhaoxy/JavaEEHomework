@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd ">
+
+	<bean id="student" class="test.edu.javaee.spring.student">
+	</bean>
+
+	<bean id="office" class="test.edu.javaee.spring.office">
+		<property name="officeId" value="999" />
+	</bean>
+
+
+	<bean id="teacher" class="test.edu.javaee.spring.teacher">
+		<property name="car" ref="car" />
+		<property name="office" ref="office" />
+	</bean>
+
+</beans>
